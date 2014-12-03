@@ -81,7 +81,6 @@ public class TwoOpt {
     int calculateWeight(ArrayList<Integer> currTour)
     {
         int n = currTour.size();
-        //System.out.println("Tour Size:" + n);
         int j = 0;
         int sumOfWeights = 0;
         
@@ -89,7 +88,6 @@ public class TwoOpt {
         {
             j = i + 1; 
             sumOfWeights = sumOfWeights + Mat[currTour.get(i)][currTour.get(i)] + Mat[currTour.get(i)][currTour.get(j)];
-            //System.out.println("sum: " + sumOfWeights);
         }
         
         return sumOfWeights;
@@ -114,34 +112,7 @@ public class TwoOpt {
             newTour.add(currTour.get(c));
         }
         
-//        System.out.println("New Tour weight: " + calculateWeight(newTour));
-//        for(int a = 0; a < newTour.size(); a++)
-//        {
-//            System.out.println(newTour.get(a));
-//        }
-        
         return newTour;
     }
     
-    public static void main(String[] main)
-    {
-        Matrix m = new Matrix();
-        int[][] mat = m.getMatrix("C:\\Users\\Hywel\\Desktop\\tsp.csv");
-        
-        TwoOpt twoOpt = new TwoOpt(mat);
-        twoOpt.randomTour();
-        System.out.println(twoOpt.calculateWeight(twoOpt.Tour_Path));
-        for(int i = 0; i < twoOpt.Tour_Path.size(); i++)
-        {
-            System.out.println(twoOpt.Tour_Path.get(i));
-        }
-       
-        twoOpt.TwoOpt(twoOpt.Tour_Path);
-        
-        System.out.println(twoOpt.calculateWeight(twoOpt.bestTour));
-        for(int i = 0; i < twoOpt.bestTour.size(); i++)
-        {
-            System.out.println(twoOpt.bestTour.get(i));
-        }
-    }
 }

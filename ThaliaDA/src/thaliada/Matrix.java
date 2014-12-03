@@ -53,7 +53,6 @@ public class Matrix {
             {
                 int currVal = values.remove(0);
                 mat[i][j] = currVal;
-                //System.out.println("Value at [" + i + "][" + j + "] is : " + currVal);
             }
         }
         
@@ -91,37 +90,4 @@ public class Matrix {
         return symMat;
     }
     
-    public static void main(String[] args)
-    {
-        Matrix a = new Matrix();
-        
-        int[][] mat = a.getMatrix("C:\\Users\\Hywel\\Desktop\\tsp.csv");
-//        int[][] asyMat = a.transposeMat(mat);
-//        int[][] symMat = a.asymToSym(mat, asyMat);
-        int N = mat[0].length;
-        
-        for(int i = 0; i < N; i++)
-        {
-           for(int j = 0; j < N; j++)
-           {
-               System.out.println("Matrix value at [" + i + "][" + j + "] is : " + mat[i][j]);
-           }
-        }
-//        
-//        for(int i = 0; i < asyMat[0].length; i++)
-//        {
-//           for(int j = 0; j < asyMat[0].length; j++)
-//           {
-//               System.out.println("asyMat value at [" + i + "][" + j + "] is : " + asyMat[i][j]);
-//           }
-//        }
-        
-//        for(int i = 0; i < symMat[0].length; i++)
-//        {
-//            for(int j = 0; j < symMat[0].length; j++)
-//            {
-//                System.out.println("symMat value at [" + i + "][" + j + "] is : " + symMat[i][j]);
-//            }
-//        }
-    }
 }

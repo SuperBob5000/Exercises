@@ -8,7 +8,6 @@ package thaliada;
 import java.awt.Desktop;
 //import java.awt.Insets;
 import java.io.File;
-import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
